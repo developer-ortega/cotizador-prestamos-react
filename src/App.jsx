@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Button from './components/Button';
-import { formatearDinero } from './helpers';
+import { formatearDinero, calcularTotalPagar } from './helpers';
 
 function App() {
   // Hook de React para guardar valores que pueden cambiar
@@ -9,6 +9,8 @@ function App() {
   // setCantidad -> la funcion que cambia ese valor
   const [cantidad, setCantidad] = useState(10000);
   const [meses, setMeses] = useState(6);
+  const [total, setTotal] = useState(0);
+
 
   // Variables normales - STEP = Saltos en 100 - MIN = Mínimo en 0 - MAX = Cantidad máxima de 20000
   const MIN = 0;
