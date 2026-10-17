@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Button from './components/Button';
-
+import { formatearDinero } from './helpers';
+ 
 function App() {
   // Hook de React para guardar valores que pueden cambiar
   // cantidad -> el valor actual del state
@@ -69,7 +70,9 @@ function App() {
           value={cantidad}
         />
         
-        <p className='text-center my-10 text-5xl font-extrabold text-indigo-600'>{cantidad}</p>
+        <p className='text-center my-10 text-5xl font-extrabold text-indigo-600'>
+          {formatearDinero(cantidad)}
+          </p>
     </div>
   )
 }
